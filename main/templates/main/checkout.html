@@ -1,0 +1,97 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    
+
+    <!-- Domain Search section -->
+    <div class="boxes-two domain-boxes search-domain domain-page">
+        <div class="custom-width">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="">
+                <table class="table table-striped custab" style="width:100%">
+                    
+                    <tr data-aos="fade-up" data-aos-delay="50" style="justify-content: space-between;">
+                        <td>Intel.brise <i class="bi bi-pencil-square"></i></td>
+                       
+                        
+                        <td>3459798 ABR</td>
+                        <td style="color: red"><i class="bi bi-trash3-fill"></i></td>
+                    </tr>
+                </table>
+            </div>
+            <br><br>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="box-container lighter-bg">
+                        <div class="box-title">
+
+                        <table class="table table-striped" style="width:100%">
+                    
+                        <tr data-aos="fade-up" data-aos-delay="50" style="justify-content: space-between; color: #fff;">
+                            <td>subtotal </td>
+                            <td>3459798 ABR</td>
+                        
+                        </tr>
+
+
+                        
+                        <tr data-aos="fade-up" data-aos-delay="50" style="justify-content: space-between; color: #fff;">
+                            <td>gas </td>
+                            <td>0.39 ABR</td>
+                            
+                        </tr>
+                        </table>
+                        </div>
+                        
+                        <div class="buttons">
+                            <a href="#" class="btn btn-green btn-small">Total: 12,000 <i class="fa fa-long-arrow-alt-right"></i></a>
+                            <a href="#" class="btn btn-outline btn-small"><i class="bi bi-cart-plus-fill"></i> Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Domain Search section ends here -->
+
+    <!-- Layout - Text right  -->
+    <div class="layout-text layout-domain gray-layout left-layout padding-bottom60 padding-top60">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="text-container" data-aos="fade-up">
+                        <h3>Benefits of a .brise domain</h3>
+                        
+                        <div class="text-content">
+                            <img src="{% static 'assets/images/icons/9.png' %}" class="img-responsive pull-left" alt="">
+                            <div class="text">
+                                <h4>Host projects with your unique and exotic domain name</h4>
+                                <p>you can host your favourite website or crypto project using your .brise domain names</p>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <img src="{% static 'assets/images/icons/10.png' %}" class="img-responsive pull-left" alt="">
+                            <div class="text">
+                                <h4>Quickly send and receive funds to a human-readable address</h4>
+                                <p>safe time and massively reduce errors of transactions using your unique easy to remember domain names.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn btn-large btn-green">Start Searching Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 domain-img">
+                    <img src="https://media.istockphoto.com/photos/modern-abstract-background-picture-id1178390169?b=1&k=20&m=1178390169&s=170667a&w=0&h=wMuCApdJNQww4TaiO19Z1haAlBhI2n5wvmx4gMgkyP4=" class="img-responsive" alt="" data-aos="fade-right">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Layout - Text right ends here  -->
+
+    
+
+    
+{% endblock %}

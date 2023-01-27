@@ -1,0 +1,314 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Home Page Carousel -->
+    <div class="home-carousel">
+        <!-- Left sidebar -->
+        <div class="left-sidebar">
+            <div class="contact-links link-style">
+                <a data-toggle="modal" data-target="#myModal"><i class="far fa-envelope"></i></a>
+                <a data-toggle="modal" data-target="#myModal1"><i class="far fa-envelope-open"></i></a>
+                <a data-toggle="modal" data-target="#myModal2"><i class="far fa-comments"></i>
+                    <div class="notification">+</div>
+                </a>
+            </div>
+            <div class="sidebar-socials link-style">
+                <a target="_blank" href="https://twitter.com/brisenaming"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://t.me/Aibra_Official"><i class="fab fa-telegram"></i></a>
+                <a arget="_blank" href="mailto:info@bitgertbrise.domains"><i class="fa fa-envelope"></i></a>
+            </div>
+        </div>
+        <!-- MODAL  -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Please feel free to contact us</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="modal-contact">
+                            <i class="fa fa-envelope"></i>
+                            <h4>info@bitgertbrise.domains</h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-blue btn-small" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end of modal -->
+        <!-- MODAL  -->
+        <div id="myModal1" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Partnership</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="modal-contact">
+                            <i class="fa fa-envelope"></i>
+                            <h6>partnership@bitgertbrise.domains</h6>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-blue btn-small" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end of modal -->
+        <!-- MODAL  -->
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Support</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="modal-contact">
+                            <i class="fa fa-envelope"></i>
+                            <h6>support@bitgertbrise.domains</h6>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-blue btn-small" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end of modal -->
+
+        <!-- Left Sidebar ends here -->
+        <div class="custom-width">
+            <div class="row">
+                <div class="tab-content">
+                    <div id="wordpress" class="tab-pane fade in active">
+                        <div class="col-sm-6">
+                            <div class="text-container">
+                                <div class="home-title animated fadeInLeft">
+                                    <h2>A Humanized ID for the Metaverse</h2>
+                                    <p>No more sandboxed usernames. Own your username, store an avatar and other profile data, and use it across services.</p>
+                                    
+                                    <div class="buttons">
+                                        <a href="{% url 'main:find' %}" class="btn btn-medium btn-green">Secure your name</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="{% static 'assets/images/png-images/world2.png' %}" class=" img-absolute" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="img-container">
+                                <img src="{% static 'assets/images/png-images/home-carousel.png' %}" class="img-responsive animated fadeInRight"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cloud" class="tab-pane">
+                        <div class="col-sm-6">
+                            <div class="text-container">
+                                <div class="home-title animated fadeInLeft">
+                                    <h2>One Name For All of Your Addresses</h2>
+                                    
+                                    <p style="text-align:justify">No more copying and pasting long addresses. Use your ENS name to store all of your addresses and receive any cryptocurrency, token, or NFT.</p>
+                                    <div class="buttons">
+                                        <a href="#" class="btn btn-medium btn-green">Join Waitlist</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="img-container">
+                                <img src="{% static 'assets/images/png-images/green-energy.png' %}" class="img-responsive animated fadeInRight"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                        <div class="tabs-switcher animated fadeInUp">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#wordpress">Humanized ID</a>
+                                </li>
+                                <li><a data-toggle="tab" href="#cloud">Readable Addresses</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Home Page Carousel -->
+
+    <!-- Domain Search section -->
+    <div class="search-domain">
+        <div class="custom-width">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="text">
+                        <h4>Search your perfect domain name</h4>
+                        <p>Get your .brise domain that can be used to represent you in the metaverse</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="domain-input">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input onkeyup="return forceLower(this);" style="color: white;" name="domain_name" placeholder="Search your perfect .brise domain name..." class="form-control" id="domain">
+                                <button class="btn btn-domain" type="submit">.brise</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Domain Search section ends here -->
+
+    
+
+    <!-- Separated Section -->
+    <div class="dual-section lighter-bg padding-top50 padding-bottom50">
+        <div class="custom-width">
+            <div class="row">
+                <div class="main-title title-white text-center">
+                    <h3>A way to represent yourself uniquely, other than 0xeror3384...nwsMPSW5</h3>
+                    <p>One of the clear benefits of the name service is a human-readable name that maps to a brise address. Essentially, creating an identity for users in the metaverse. </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="left-content">
+                        <div class="features">
+                            <i class="fa fa-fighter-jet pull-left" data-aos="zoom-in"></i>
+                            <div class="text">
+                                <h4>Quickly send and receive funds to a human-readable address</h4>
+                                <p>Worry no more about long, unmemorable wallet addresses. Transact directly from domain to domain instead of a cryptic key.</p>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <i class="fa fa-address-card pull-left" data-aos="zoom-in" data-aos-delay="100"></i>
+                            <div class="text">
+                                <h4>Get verified so everyone knows it’s really you</h4>
+                                <p>Confirm your identity by linking your Twitter handle to your wallet address. Enjoy the added advantage of easy funds transferring straight to registered handles.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="right-content">
+                        <div class="features">
+                            <i class="fa fa-id-card pull-left" data-aos="zoom-in"></i>
+                            <div class="text">
+                                <h4>Collect and exchange .brise names directly or as NFTs</h4>
+                                <p>Use, transfer and resell valuable domain names. Become profitable from these one-of-a-kind domains with our broad NFT marketplace support.</p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <i class="fa fa-rocket pull-left" data-aos="zoom-in" data-aos-delay="100"></i>
+                            <div class="text">
+                                <h4>Host projects with your unique and exotic domain name</h4>
+                                <p>Benefit from the power of decentralization by hosting your favorite website or app with your personal domain. Think Google, but Web 3.0, uncensorable and 100% private ownership.</p>
+                                <p></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Separated Section ends here-->
+    
+
+    
+
+    <!-- Layout - Text right  -->
+    <div class="layout-text right-layout padding-bottom60 padding-top60">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <img src="{% static 'assets/images/png-images/green-energy.png' %}" class="img-responsive" alt="" data-aos="fade-right">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text-container" data-aos="fade-up">
+                        <h3>Why Brise Name Service?</h3>
+                        <div class="text-content">
+                            <i class="far fa-check-circle pull-left"></i>
+                            <div class="text">
+                                <p>Eliminates the barrier of unmemorable wallet address formats, and therefore having an identifiable address thus facilitate payments and its efficiency.</p>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <i class="far fa-check-circle pull-left"></i>
+                            <div class="text">
+                                <p>NFT domains are owned not rented. Buy the domain with a one time registration fee and never worry about renewals again.</p>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <i class="far fa-check-circle pull-left"></i>
+                            <div class="text">
+                                <p>The domain is stored in your wallet, just like a cryptocurrency. No one can move it around other than you.</p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="/find/" class="btn btn-medium btn-green">Secure your name <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Layout - Text right ends here  -->
+
+    <!-- Call to action -->
+    <div class="call-to-action cta-green  search-domain">
+        <div class="custom-width">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Join the Waitlist</h3>
+                    <p>Get first hand info on brise naming service and be among our early testers</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="domain-input">
+                        <form action="#">
+                            <div class="form-group ">
+                                <input placeholder="enter email..." class="form-control" id="domain">
+                                <button class="btn btn-domain" type="submit">Join Waitlist</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to action ends here -->
+    
+                 <script>
+                    function forceLower(strInput)
+                    {
+                        strInput.value = strInput.value.toLowerCase();
+                    }
+                </script>
+
+    {% endblock %}

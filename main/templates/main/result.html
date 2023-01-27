@@ -1,0 +1,93 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    
+
+    <!-- Domain Search section -->
+    <div class="search-domain domain-page">
+        <div class="custom-width">
+            <div class="row">
+                
+                <div class="col-sm-12 col-xs-12 col-12">
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input onkeyup="return forceLower(this);" style="color: white;" style="color: white;" name="domain_name" placeholder="Search your perfect .brise domain name..." class="form-control" id="domain">
+                            <button class="btn btn-domain" type="submit">.brise</button>
+                        </div>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Domain Search section ends here -->
+
+    <!-- Doamin boxes -->
+    <div class="boxes-two domain-boxes padding-top50 padding-bottom50">
+        <div class="custom-width">
+            <!-- Row one -->
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="box-container lighter-bg">
+                        <div class="box-title">
+                            <p style="text-align:center;color: #be7b2e;">Status:
+                        {% if available == True %}
+                            <span>Available</span>
+                        {% elif available == None %}
+                            <span>Reserved/Special</span>
+                        {% else %}
+                            <span>Not Available</span><br />
+                            <p style="text-align:center"><small>Taken by {{ name_address }}</small></p>
+                        {% endif %}
+                        </p>
+                        <h5 style="text-align:center"><i class="fa fa-user"></i> {{ domain_name }}.brise</h5>
+                        <table class="table table-striped" style="width:100%">
+                    
+                        <tr data-aos="fade-up" data-aos-delay="50" style="justify-content: space-between; color: #fff;">
+                            <td>Cost:</td>
+                            <td style="float:right"> {{ name_price }}(brise)</td>
+                        
+                        </tr>
+                        <tr data-aos="fade-up" data-aos-delay="50" style="justify-content: space-between; color: #fff;">
+                            <td>Total:</td>
+                            <td style="float:right"> {{ name_price }}(brise)/yr</td>
+                        
+                        </tr>
+                        
+
+                        </table>
+                        </div>
+                        
+                        <div class="buttons">
+                            
+                            <a {% if available == True %} href="{% url 'main:buy' domain_name %}" {% elif available == None %} href="mailto:hello@aibra.io" {% else %} href="" {% endif %} class="btn btn-outline btn-small"><i class="bi bi-cart-plus-fill"></i> Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            
+            
+        </div>
+    </div>
+    <!-- Domain boxes section ends here -->
+
+                <script>
+                    function forceLower(strInput)
+                    {
+                        strInput.value = strInput.value.toLowerCase();
+                    }
+                </script>
+
+
+{% endblock %}

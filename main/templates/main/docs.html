@@ -1,0 +1,149 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    
+
+        <!-- Features five -->
+    <div class="features-five padding-bottom60">
+        <div class="custom-width">
+            <div class="row">
+                <div class="main-title title-white text-center">
+                    
+                    
+                </div>
+                
+
+                <div class="main-title title-white text-center">
+                    
+                    
+                </div>
+                
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2>Convert Name to Address</h2>
+                        <div class="text-content" style="background-color: #282a36;" >
+                            
+                            <div class="text">
+                                
+                                <h4 style="color: #6272a4"> // Replace "test" with your BNS name. 
+<a data-hex='// Replace "test" with your BNS name.... 
+const name = "gert.brise";
+const response = await fetch(`https://api.aibra.io/bns/get-address/${name}/`);
+const { address } = await response.json();
+//address will be a string '  class="copy-btn uk-button uk-button-primary uk-width-1-1 "><i style="float:right;" class="bi bi-clipboard"></i></a></h4>
+                                <h4 style="color: #ffffff">1. <span style="color: #ff79c6">const</span> name = <span style="color: #f1fa8c">"test"</span>;</h4>
+                                <h4 style="color: #ffffff">2. <span style="color: #ff79c6">const</span> response = <span style="color: #ff79c6">await</span> fetch(<span style="color: #f1fa8c">`https://api.aibra.io/bns/get-address/</span>${name}<span style="color: #f1fa8c">`</span>);</h4>
+                                <h4 style="color: #ffffff">3. <span style="color: #ff79c6">const</span> { address } = <span style="color: #ff79c6">await</span> response.<span style="color: #50fa7b">json()</span>;</h4>
+                            </div>
+                        </div>
+                         <br><br>
+                    </div>
+                    
+                   
+
+                
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2>Convert Address to Names</h2>
+                        <div class="text-content" style="background-color: #282a36;" >
+                            
+                            <div class="text">
+                                
+                                <h4 style="color: #6272a4"> // Replace "address" with the address you want to lookup.
+<a data-hex='// Replace "address" with the address you want to lookup.
+const address = "0x1234...abcdef";
+const response = await fetch(`https://api.aibra.io/bns/get-names/${address}/`);
+const { names } = await response.json();
+//names will be an array of names(as an address could now have more than one names)'  class="copy-btn uk-button uk-button-primary uk-width-1-1 "><i style="float:right;" class="bi bi-clipboard"></i></a></h4>
+                                <h4 style="color: #ffffff">1. <span style="color: #ff79c6">const</span> address = <span style="color: #f1fa8c">"0x1234...abcdef"</span>;</h4>
+                                <h4 style="color: #ffffff">2. <span style="color: #ff79c6">const</span> response = <span style="color: #ff79c6">await</span> fetch(<span style="color: #f1fa8c">`https://api.aibra.io/bns/get-names/</span>${address}<span style="color: #f1fa8c">`</span>);</h4> 
+                                <h4 style="color: #ffffff">3. <span style="color: #ff79c6">const</span> { names }  = <span style="color: #ff79c6">await</span> response.<span style="color: #50fa7b">json()</span>;</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <br><br>
+                <br><br><br><br><br><br><br><br><br>
+                
+                
+                    
+                </div>
+                
+           
+    <!-- Features five ends here -->
+
+    
+
+
+    <style>
+
+        .btn {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+        }
+        
+        .enableEthereumButton {
+          background-color: #037dd6;
+        }
+        .sendEthButton {
+          background-color: #4CAF50;
+        }
+        
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+        <script src="{% static 'js/index.js' %}"></script>
+        <script type="text/javascript">
+  const copyBtns = [...document.getElementsByClassName('copy-btn')]
+  let previous = null
+
+  copyBtns.forEach(btn=> btn.addEventListener('click', ()=>{
+    const number = btn.getAttribute('data-hex')
+    navigator.clipboard.writeText(number)
+    btn.innerHTML = '<i style="float:right;" class="bi bi-clipboard-check-fill"></i>'
+
+    if (previous) {
+      previous.innerHTML = '<i style="float:right;" class="bi bi-check2-all"></i>';
+    }
+    previous = btn
+  }))
+  
+  
+</script>
+
+<script type="text/javascript">
+  const copyBtn = [...document.getElementsByClassName('copy-btns')]
+  let previous = null
+
+  copyBtn.forEach(btn=> btn.addEventListener('click', ()=>{
+    const number = btn.getAttribute('data-hex')
+    navigator.clipboard.writeText(number)
+    btn.textContent = 'copied to clipboard'
+
+    if (previous) {
+      previous.textContent = 'copied to clipboard'
+    }
+    previous = btn
+  }))
+  
+  
+</script>
+
+        
+     
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    
+
+    
+
+    <!-- Doamin boxes -->
+    <div class="boxes-two domain-boxes padding-top50 padding-bottom50">
+        <div class="custom-width">
+            <!-- Row one -->
+            <div class="row">
+                <h3 style="text-align:center">You are about to purchase a name({{ domain_name }})</h3>
+            </div>
+            <div class="row"> 
+                <div class="col-sm-3">
+                </div>  
+                <div class="col-sm-6">
+                    <div class="box-container lighter-bg">
+                        <div class="box-title">
+                            <h5 style="text-align: center;"><i class="fa fa-cloud"></i>{{ domain_name }}{{ domain_name|json_script:"domain_name" }}.brise</h5>
+                        </div>
+                        
+                        <div class="buttons" style="align-items:center;">
+                            <p style="text-align: center;">
+                            <button class="btn btn-medium btn-green enableEthereumButton">Connect to Metamask</button>
+                            <button class="btn btn-medium btn-success sendEthButton">Buy Domain</button>
+                            <a href="{% url 'main:finish' %}" class="btn btn-medium btn-warning">Finish</a>
+                            <hr>
+                            <p style="text-align:center;">Address: <span class="showAccount"></span></p>
+                            </p>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- Domain boxes section ends here -->
+
+    
+
+
+    <style>
+
+        .btn {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+        }
+        
+        .enableEthereumButton {
+          background-color: #037dd6;
+        }
+        .sendEthButton {
+          background-color: #4CAF50;
+        }
+        
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+        <script src="{% static 'js/index.js' %}"></script>
+
+        
+     
+
+{% endblock %}

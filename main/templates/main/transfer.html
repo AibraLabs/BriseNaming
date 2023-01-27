@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    
+
+
+    <!-- Doamin boxes -->
+    <div class="boxes-two domain-boxes padding-top50 padding-bottom50">
+        <div class="custom-width">
+            <!-- Row one -->
+            <div class="row" >
+            
+                <h1 style="text-align:center; color:#ffffff">Transfer Names</h1>
+                
+                <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input style="color: white;" name="domain_name" placeholder="Search your perfect .brise domain name..." class="form-control" id="domain">
+                            <button class="btn btn-domain" type="submit">Search Now</button>
+                        </div>
+                        
+                    </form>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+    <!-- Domain boxes section ends here -->
+
+    
+
+
+{% endblock %}

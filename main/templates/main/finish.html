@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+    
+
+    <!-- Domain Search section -->
+    <div class="search-domain domain-page">
+        <div class="custom-width">
+            <div class="row">
+                
+                <div class="col-sm-12 col-xs-12 col-12">
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input style="color: white;" name="domain_name" placeholder="Search your perfect .brise domain name..." class="form-control" id="domain">
+                            <button class="btn btn-domain" type="submit">Search Now</button>
+                        </div>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Domain Search section ends here -->
+
+    <!-- Doamin boxes -->
+    <div class="boxes-two domain-boxes padding-top50 padding-bottom50">
+        <div class="custom-width">
+            <!-- Row one -->
+            <div class="row" >
+            
+                <h1 style="text-align:center; color:#ffffff">Congratulations</h1>
+                <p style="text-align:center; color:#ffffff">Your have successfully place your order.<br />
+                Search the same Name to see if its still available..</p>
+                
+                
+            </div>
+            
+            
+        </div>
+    </div>
+    <!-- Domain boxes section ends here -->
+
+    
+
+
+{% endblock %}
